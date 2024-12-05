@@ -1,0 +1,5 @@
+*{margin: 0; padding: 0;}
+.butnfon{position: absolute; z-index: 3;}
+#prim01, #prim02, #prim03, #prim04
+{display: none}
+

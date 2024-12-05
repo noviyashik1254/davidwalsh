@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Walsh</title>
+    <link rel="stylesheet" href="davidwalsh.css" />    
+    <style>
+*{margin: 0; padding: 0;}
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+img[data-src] {
+  opacity: 0;
+}
+    </style>
+</head>
+<body>
+
+  <div class="butnfon" id="butnfon">
+    <button class="btn btn-primary" id="butn0">&nbspГранд-Каньон&nbsp</button>
+    <button class="btn btn-primary" id="butn1">&nbspФон&nbsp1&nbsp</button>
+    <button class="btn btn-primary" id="butn2">&nbspФон&nbsp2&nbsp</button>
+    <button class="btn btn-primary" id="butn3">&nbspФон&nbsp3&nbsp</button>
+  </div>
+
+    <img id="prim01" width="100%" height="100%" data-src="back/grandcanyon.jpg" alt="Нет фото">
+    <img id="prim02" width="100%" height="100%" data-src="back/grandcanyon0.jpg" alt="Нет фото">
+    <img id="prim03" width="100%" height="100%" data-src="back/grandcanyon1.jpg" alt="Нет фото">
+    <img id="prim04" width="100%" height="100%" data-src="back/grandcanyon2.jpg" alt="Нет фото">
+
+<script>
+[].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
+  img.setAttribute('src', img.getAttribute('data-src'));
+  img.onload = function() {
+    img.removeAttribute('data-src');
+  };
+});
+</script>
+<script src="backgr.js"></script>      
+
+</body>
+</html>
